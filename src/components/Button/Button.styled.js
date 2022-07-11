@@ -17,18 +17,23 @@ export const StyledButton = styled.button`
   padding-bottom: ${p => {
     return p.type === 'submit' ? '8px' : '0px';
   }};
+  background-color: ${p => p.theme.colors.background};
   border: ${p => p.theme.borders.normal};
   border-color: ${p => p.theme.colors.muted};
   border-radius: ${p => p.theme.radii.normal};
-  background-color: ${p => p.theme.colors.background};
   cursor: pointer;
 
   :hover {
     border-color: ${p => {
-      return p.type === 'submit' ? p.theme.colors.primary : 'red';
+      return p.type === 'submit' ? p.theme.colors.secondary : 'red';
     }};
     color: ${p => {
-      return p.type === 'submit' ? p.theme.colors.accent : 'red';
+      return p.type === 'submit' ? p.theme.colors.white : 'red';
+    }};
+    background-color: ${p => {
+      return p.type === 'submit'
+        ? p.theme.colors.primary
+        : p.theme.colors.background;
     }};
   }
 `;
