@@ -91,7 +91,7 @@ class App extends Component {
         </Box>
         <Box width="300px">
           <h2>Contacts</h2>
-          <Filter onChange={this.handleFilter} />
+          <Filter value={this.state.filter} onChange={this.handleFilter} />
           <ContactList
             values={this.filterContacts()}
             handleDelete={this.deleteContact}
